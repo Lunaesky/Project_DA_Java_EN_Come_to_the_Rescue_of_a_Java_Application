@@ -11,6 +11,7 @@ public class WriteSymptomDataFromFile {
     public String filepath;
 
 
+
     public WriteSymptomDataFromFile(String filepath) throws IOException {
         this.filepath = filepath;
     }
