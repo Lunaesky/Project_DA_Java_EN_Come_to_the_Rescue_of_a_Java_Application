@@ -9,12 +9,12 @@ public class AnalyticsCounter {
 	public static void main(String args[]) throws Exception {
 
 		try {
-			ReadSymptomDataFromFile symptomDataFromFile = new ReadSymptomDataFromFile("Project02Eclipse/symptoms.txt");
-			List<String>symptoms=symptomDataFromFile.GetSymptoms();
+			ReadSymptomDataFromFile symptomDataFromFile = new ReadSymptomDataFromFile("symptoms.txt");
+			List<String>symptoms=symptomDataFromFile.getSymptoms();
 			System.out.println(symptoms);
 
 			WriteSymptomDataFromFile writeSymptom=new WriteSymptomDataFromFile("result.txt");
-			System.out.println(writeSymptom.WriteSymptoms(symptoms));
+			System.out.println(writeSymptom.writeSymptoms(symptoms));
 
 
 		} catch (Exception e) {

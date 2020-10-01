@@ -6,17 +6,17 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
-public class WriteSymptomDataFromFile {
+public class WriteSymptomDataFromFile implements ISymptomWriter {
 
     public String filepath;
-
 
 
     public WriteSymptomDataFromFile(String filepath) throws IOException {
         this.filepath = filepath;
     }
 
-    public List<String> WriteSymptoms(List<String> symptoms) {
+    @Override
+    public List<String> writeSymptoms(List<String> symptoms) {
         HashMap<String, Integer> tableMotCle = new HashMap<>();
 
 
