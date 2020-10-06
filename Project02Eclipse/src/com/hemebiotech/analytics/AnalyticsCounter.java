@@ -1,13 +1,8 @@
 package com.hemebiotech.analytics;
 
-
-import jdk.swing.interop.SwingInterOpUtils;
-
-import java.sql.SQLOutput;
 import java.util.List;
 
 public class AnalyticsCounter {
-
 
 	public static void main(String args[]) {
 
@@ -24,10 +19,8 @@ public class AnalyticsCounter {
 
 
 		} catch (Exception e) {
-			System.out.println("Exécution du programme en échec");
+			System.out.println("Erreur du type de variable");
 			e.printStackTrace();
 		}
-
 	}
-
 }

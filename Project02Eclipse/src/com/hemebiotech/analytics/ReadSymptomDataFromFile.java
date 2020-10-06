@@ -4,42 +4,50 @@ import java.io.*;
 import java.util.*;
 
 
-
 /**
  * Simple brute force implementation
- *
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
-	private String filepath;
+    private String filepath;
 
-	/**
-	 * @param filepath a full or partial path to file with symptom strings in it, one per line
-	 */
-	public ReadSymptomDataFromFile(String filepath) {
-		this.filepath = filepath;
-	}
+    /**
+     * @param filepath a full or partial path to file with symptom strings in it, one per line
+     */
+    public ReadSymptomDataFromFile(String filepath) {
+        this.filepath = filepath;
+    }
 
-	@Override
-	public List<String> getSymptoms() {
-		ArrayList<String> result = new ArrayList<String>();
+    /***
+     *
+     *
+     * @return result an arrayList
+     *
+     */
 
-		if (filepath != null) {
-			try {
-				BufferedReader reader = new BufferedReader(new FileReader(filepath));
-				String line = reader.readLine();
+    @Override
+    public List<String> getSymptoms() {
+        ArrayList<String> result = new ArrayList<String>();
 
-				while (line != null) {
-					result.add("\n" + line);
-					line = reader.readLine();
-				}
-				reader.close();
+        if (filepath != null) {
+            try {
+                BufferedReader reader = new BufferedReader(new FileReader(filepath));
+                try {
 
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
+                    String line = reader.readLine();
 
-		return result;
-	}
+                    while (line != null) {
+                        result.add("\n" + line);
+                        line = reader.readLine();
+                    }
+                } finally {
+                    reader.close();
+                }
+            } catch (IOException e) {
+                System.out.println("Le fichier symptoms.txt doit comporté au moins 1 symptôme");
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
 }
