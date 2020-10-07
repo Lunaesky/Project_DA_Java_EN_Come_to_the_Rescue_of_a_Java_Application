@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.util.*;
 
 /**
+ * @author Landing
  * Simple brute force implementation
  */
 
@@ -16,20 +17,19 @@ public class WriteSymptomDataFromFile implements ISymptomWriter {
         this.filepath = filepath;
     }
 
-    /**
+    /**blabla
      * @param symptoms a list of string
      * @return a list of string
      */
     @Override
-    public List<String> writeSymptoms(List<String> symptoms) {
-        HashMap<String, Integer> tableMotCle = new HashMap<>();
+    public void writeSymptoms(Map<String, Integer> symptoms) {
 
         if (filepath != null) {
             try {
                 FileWriter writer = new FileWriter("result.txt");
                 try {
 
-                    TreeMap<String, Integer> map = new TreeMap<String, Integer>(tableMotCle);
+                    TreeMap<String, Integer> map = new TreeMap<String, Integer>(symptoms);
                     writer.write(map.toString());
 
                 } finally {
@@ -41,7 +41,7 @@ public class WriteSymptomDataFromFile implements ISymptomWriter {
                 e.printStackTrace();
             }
         }
-        return symptoms;
+
     }
 }
 

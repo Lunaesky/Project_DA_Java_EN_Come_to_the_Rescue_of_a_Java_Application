@@ -1,9 +1,9 @@
 package com.hemebiotech.analytics;
 
-import java.util.List;
+import java.util.Map;
 
 /**
- *
+ * @author Landing
  * Provides the classes necessary to create a file
  *
  */
@@ -14,5 +14,5 @@ public interface ISymptomWriter {
      *
      * @return create the file
      */
-    List<String> writeSymptoms(List<String> symptoms);
+    void writeSymptoms(Map<String, Integer> symptoms);
 }

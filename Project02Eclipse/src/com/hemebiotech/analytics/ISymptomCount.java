@@ -1,6 +1,7 @@
 package com.hemebiotech.analytics;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Don't need to modify this file just write in the .txt file
@@ -14,5 +15,5 @@ public interface ISymptomCount {
      *
      * @return count a number of occurrence for each symptom
      */
-    List<String> count(List<String> symptoms);
+    Map<String, Integer> count(List<String> symptoms);
 }

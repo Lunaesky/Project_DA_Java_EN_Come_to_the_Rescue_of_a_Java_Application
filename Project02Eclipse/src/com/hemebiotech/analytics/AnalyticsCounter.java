@@ -1,6 +1,7 @@
 package com.hemebiotech.analytics;
 
 import java.util.List;
+import java.util.Map;
 
 public class AnalyticsCounter {
 
@@ -11,12 +12,12 @@ public class AnalyticsCounter {
 			List<String>symptoms=symptomDataFromFile.getSymptoms();
 			System.out.println(symptoms);
 
+			CountSymptoms countSymptoms=new CountSymptoms();
+			Map<String, Integer>symptomCount=countSymptoms.count(symptoms);
+			System.out.println(symptomCount);
+
 			WriteSymptomDataFromFile writeSymptom=new WriteSymptomDataFromFile("result.txt");
-			System.out.println(writeSymptom.writeSymptoms(symptoms));
-
-			CountSymptoms countSymptoms=new CountSymptoms("result.txt");
-			System.out.println(countSymptoms.count(symptoms));
-
+			writeSymptom.writeSymptoms(symptomCount);
 
 		} catch (Exception e) {
 			System.out.println("Erreur du type de variable");
