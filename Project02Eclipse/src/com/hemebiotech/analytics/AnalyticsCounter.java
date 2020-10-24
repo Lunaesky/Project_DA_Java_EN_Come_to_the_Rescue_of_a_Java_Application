@@ -12,6 +12,7 @@ public class AnalyticsCounter {
 	public static void main(String args[]) {
 
 		try {
+			
 			ReadSymptomDataFromFile symptomDataFromFile = new ReadSymptomDataFromFile("symptoms.txt");
 			List<String>symptoms=symptomDataFromFile.getSymptoms();
 			System.out.println(symptoms);
