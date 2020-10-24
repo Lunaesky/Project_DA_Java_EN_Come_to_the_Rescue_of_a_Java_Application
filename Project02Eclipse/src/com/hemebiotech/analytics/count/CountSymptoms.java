@@ -1,16 +1,16 @@
 package com.hemebiotech.analytics;
 
-import java.io.FileWriter;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.TreeMap;
+
 
 
 /***
  *
  * Simple brute force implementation
- *
+ * @author Landing
  */
 public class CountSymptoms implements ISymptomCount {
 
@@ -22,9 +22,9 @@ public class CountSymptoms implements ISymptomCount {
 
     /***
      *
+     * Provide the count of symptoms
      * @param symptoms  a List of string
-     *
-     * @return a List of string
+     * @return a HashMap
      *
      */
     @Override

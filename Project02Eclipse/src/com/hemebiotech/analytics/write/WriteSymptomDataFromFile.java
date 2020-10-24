@@ -6,6 +6,7 @@ import java.util.*;
 
 /**
  * @author Landing
+ * @version 1.0
  * Simple brute force implementation
  */
 
@@ -17,9 +18,10 @@ public class WriteSymptomDataFromFile implements ISymptomWriter {
         this.filepath = filepath;
     }
 
-    /**blabla
-     * @param symptoms a list of string
-     * @return a list of string
+    /**
+     * A class that provide the writing of symptoms
+     * @param symptoms a Map
+     *
      */
     @Override
     public void writeSymptoms(Map<String, Integer> symptoms) {
