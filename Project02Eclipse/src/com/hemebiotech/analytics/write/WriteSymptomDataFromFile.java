@@ -1,4 +1,4 @@
-package com.hemebiotech.analytics;
+package com.hemebiotech.analytics.write;
 
 
 import java.io.FileWriter;
@@ -28,7 +28,7 @@ public class WriteSymptomDataFromFile implements ISymptomWriter {
 
         if (filepath != null) {
             try {
-                FileWriter writer = new FileWriter("result.txt");
+                FileWriter writer = new FileWriter("result.out");
                 try {
 
                     TreeMap<String, Integer> map = new TreeMap<String, Integer>(symptoms);
