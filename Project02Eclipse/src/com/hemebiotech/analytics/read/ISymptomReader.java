@@ -17,6 +17,6 @@ public interface ISymptomReader {
 	 * If no data is available, return an empty List, Symptoms obtained from a data source, duplicates are possible/probable
 	 * @return  a raw listing of all Symptoms obtained from a data source, duplicates are possible/probable
 	 */
-	
+
 	 List<String> getSymptoms();
 }
