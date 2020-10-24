@@ -1,4 +1,4 @@
-package com.hemebiotech.analytics;
+package com.hemebiotech.analytics.count;
 
 
 import java.util.HashMap;
@@ -22,7 +22,7 @@ public class CountSymptoms implements ISymptomCount {
 
     /***
      *
-     * Provide the count of symptoms
+     * Provide the count of each symptoms
      * @param symptoms  a List of string
      * @return a HashMap
      *
